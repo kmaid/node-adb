@@ -2,7 +2,7 @@ FROM mhart/alpine-node:latest
 
 RUN set -xeo pipefail && \
     apk update && \
-    apk add wget ca-certificates tini unzip && \
+    apk add wget ca-certificates tini unzip ffmpeg && \
     wget -O "/etc/apk/keys/sgerrand.rsa.pub" \
       "https://raw.githubusercontent.com/andyshinn/alpine-pkg-glibc/master/sgerrand.rsa.pub" && \
     wget -O "/tmp/glibc.apk" \
